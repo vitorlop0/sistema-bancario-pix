@@ -1,0 +1,8 @@
+dados_banco.json
+qr_code_gerado.png
+refactor.py
+
+.env
+
+__pycache__/
+*.pyc
