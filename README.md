@@ -38,8 +38,8 @@ Este projeto foi desenvolvido com o objetivo de praticar lógica de programaçã
 
 **1. Clone o repositório**
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+git clone https://github.com/vitorlop0/sistema-bancario-pix.git
+cd sistema-bancario-pix
 ```
 
 **2. Instale as dependências**
@@ -65,7 +65,7 @@ python main.py
 ## Estrutura do projeto
 
 ```
-seu-repositorio/
+sistema-bancario-pix/
 ├── main.py              # Código principal e lógica do sistema
 ├── requirements.txt     # Lista de dependências do projeto
 ├── .env.example         # Template seguro para variáveis de ambiente
