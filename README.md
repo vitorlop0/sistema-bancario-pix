@@ -2,6 +2,8 @@
 
 Sistema bancário simples desenvolvido em Python com funcionalidades de depósito, envio de PIX com geração de QR Code dinâmico e persistência de dados em arquivo JSON.
 
+**Status:** projeto em desenvolvimento, com foco em refatoração, organização do código e evolução das funcionalidades.
+
 ---
 
 ## Sobre o projeto
