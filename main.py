@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# Método do crc16 criado com auxílio de IA
 def calcular_crc16(payload):
     # Essa é a fórmula matemática padrão exigida pelo Banco Central para o PIX (método criado com ajuda de IA)
     crc = 0xFFFF
@@ -30,16 +31,16 @@ def gerar_qrcode(valor_pix):
     tam_cidade = f"{len(cidade):02d}"
     tam_chave = f"{len(chave):02d}"
 
-    # 1. Formatamos o valor para ter sempre 2 casas decimais (ex: 50.50)
+    #  Formatamos o valor para ter sempre 2 casas decimais (ex: 50.50)
     str_valor = f"{valor_pix:.2f}"
     
-    # 2. Descobrimos o tamanho desse valor (ex: "50.50" tem 5 caracteres, então vira "05")
+    #  Descobrimos o tamanho desse valor (ex: "50.50" tem 5 caracteres, então vira "05")
     tamanho_valor = f"{len(str_valor):02d}"
 
-    # 3. Montamos o bloquinho do dinheiro (ID 54 + Tamanho + Valor)
+    #  Montamos o bloquinho do dinheiro (ID 54 + Tamanho + Valor)
     bloco_valor = f"54{tamanho_valor}{str_valor}"
 
-    # 4. Juntamos tudo (Seus dados + o bloco de dinheiro dinâmico)
+    #  Juntamos tudo (Seus dados + o bloco de dinheiro dinâmico)
     # Note que termina em "6304", que é o aviso pro banco de que a assinatura vem logo depois
     payload = (
         f"00020101021126360014br.gov.bcb.pix01{tam_chave}{chave}520400005303986" +
